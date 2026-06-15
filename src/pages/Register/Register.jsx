@@ -11,6 +11,9 @@ function Register() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  // 🔥 CHANGE THIS WHEN YOU DEPLOY BACKEND
+  const BASE_URL = "http://localhost:8081";
+
   const handleRegister = async (e) => {
     e.preventDefault();
 
@@ -20,7 +23,7 @@ function Register() {
     }
 
     try {
-      const response = await fetch("http://localhost:8081/api/register", {
+      const response = await fetch(`${BASE_URL}/api/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,16 +37,18 @@ function Register() {
       });
 
       const result = await response.text();
+      console.log("Backend response:", result);
 
       alert(result);
 
-      if (result === "Registration Successful") {
+      // ✅ reliable redirect condition
+      if (response.ok) {
         navigate("/login");
       }
 
     } catch (error) {
-      console.log(error);
-      alert("Server error");
+      console.log("Error:", error);
+      alert("Server error. Please try again later.");
     }
   };
 
