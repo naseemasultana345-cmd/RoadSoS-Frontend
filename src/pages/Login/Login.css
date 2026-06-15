@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* ===== CONTAINER ===== */
+.login-container{
+    height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to bottom,#0F172A,#1E293B);
+    padding:20px;
+}
+
+/* ===== LOGIN BOX ===== */
+.login-box{
+    width:100%;
+    max-width:380px;
+    background:#1E293B;
+    padding:40px 30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0px 0px 25px rgba(0,0,0,0.5);
+    animation:fadeIn 1.5s ease;
+}
+
+/* ===== TITLE ===== */
+.login-box h1{
+    color:white;
+    margin-bottom:10px;
+    font-size:clamp(28px, 5vw, 40px);
+}
+
+/* ===== SUBTITLE ===== */
+.login-box p{
+    color:#CBD5E1;
+    margin-bottom:25px;
+    font-size:clamp(14px, 3vw, 16px);
+}
+
+/* ===== INPUTS ===== */
+.login-box input{
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+}
+
+/* ===== BUTTON ===== */
+.login-box button{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:none;
+    border-radius:8px;
+    background:#2563EB;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-box button:hover{
+    background:#1D4ED8;
+    transform:scale(1.03);
+}
+
+/* ===== TEXT LINKS ===== */
+.login-box h4{
+    color:#CBD5E1;
+    margin-top:20px;
+    font-weight:normal;
+    font-size:clamp(12px, 2.5vw, 14px);
+}
+
+.login-box span{
+    color:#60A5FA;
+    cursor:pointer;
+}
+
+/* ===================== */
+/* RESPONSIVE BREAKPOINTS */
+/* ===================== */
+
+/* 📱 Small phones */
+@media (max-width:480px){
+
+    .login-box{
+        padding:30px 20px;
+        border-radius:12px;
+    }
+
+    .login-box input{
+        padding:12px;
+    }
+
+    .login-box button{
+        padding:12px;
+        font-size:15px;
+    }
+}
+
+/* 📱 Tablets */
+@media (max-width:768px){
+
+    .login-box{
+        max-width:90%;
+    }
+}
+
+/* 💻 Small laptops */
+@media (max-width:1024px){
+
+    .login-box{
+        max-width:420px;
+    }
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

@@ -1,0 +1,166 @@
+.ambulance-container {
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+  padding-bottom: 50px;
+}
+
+/* HEADER */
+.ambulance-header {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+.ambulance-header h1 {
+  font-size: 36px;
+  color: #60a5fa;
+}
+
+.ambulance-header p {
+  color: #94a3b8;
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.search-box input {
+  padding: 12px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+}
+
+.search-box button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  transform: scale(1.05);
+}
+
+.reset-btn {
+  background: #ef4444 !important;
+}
+
+/* FILTER */
+.filter-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filter-box select {
+  padding: 12px;
+  width: 220px;
+  border-radius: 10px;
+  background: #1e293b;
+  color: white;
+  border: none;
+}
+
+/* GRID */
+.ambulance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* CARD */
+.ambulance-card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  animation: fadeUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.ambulance-card:hover {
+  transform: translateY(-8px);
+}
+
+.ambulance-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.ambulance-card h3 {
+  color: #60a5fa;
+}
+
+.ambulance-card p {
+  color: #cbd5f5;
+}
+
+/* BUTTON */
+.call-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.call-btn:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #1e293b;
+  border-top: 4px solid #60a5fa;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 1s linear infinite;
+}
+
+/* EMPTY */
+.empty-state {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 40px;
+}
+
+/* ANIMATIONS */
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

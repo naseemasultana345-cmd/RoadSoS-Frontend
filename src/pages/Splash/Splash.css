@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+.splash-container{
+    height:100vh;
+    width:100%;
+    background:linear-gradient(to bottom,#0F172A,#1E293B);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    padding:20px;
+}
+
+.splash-content{
+    text-align:center;
+    animation:fadeIn 2s ease;
+    max-width:90%;
+}
+
+/* ===== TITLE ===== */
+.splash-content h1{
+    font-size:clamp(40px, 8vw, 80px);
+    color:white;
+    margin-bottom:20px;
+    letter-spacing:3px;
+    animation:glow 2s infinite alternate;
+}
+
+/* ===== SUBTITLE ===== */
+.splash-content p{
+    font-size:clamp(16px, 4vw, 24px);
+    color:#CBD5E1;
+    margin-bottom:35px;
+    animation:slideUp 2s ease;
+    padding:0 10px;
+}
+
+/* ===== BUTTON ===== */
+.splash-content button{
+    padding:15px 40px;
+    background:#2563EB;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:clamp(14px, 3vw, 18px);
+    cursor:pointer;
+    transition:0.3s;
+    animation:floatButton 2s infinite ease-in-out;
+    width:auto;
+    min-width:160px;
+}
+
+.splash-content button:hover{
+    background:#1D4ED8;
+    transform:scale(1.05);
+}
+
+/* ===================== */
+/* RESPONSIVE BREAKPOINTS */
+/* ===================== */
+
+/* 📱 Small phones */
+@media (max-width:480px){
+
+    .splash-content h1{
+        letter-spacing:1px;
+    }
+
+    .splash-content p{
+        margin-bottom:25px;
+    }
+
+    .splash-content button{
+        width:100%;
+        padding:14px;
+    }
+}
+
+/* 📱 Tablets */
+@media (max-width:768px){
+
+    .splash-content h1{
+        font-size:55px;
+    }
+
+    .splash-content p{
+        font-size:18px;
+    }
+}
+
+/* 💻 Small laptops */
+@media (max-width:1024px){
+
+    .splash-content h1{
+        font-size:65px;
+    }
+}
+
+/* ===== ANIMATIONS (same as yours) ===== */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #2563EB;
+    }
+    to{
+        text-shadow:0 0 25px #60A5FA;
+    }
+}
+
+@keyframes slideUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes floatButton{
+    0%{ transform:translateY(0px); }
+    50%{ transform:translateY(-8px); }
+    100%{ transform:translateY(0px); }
+}

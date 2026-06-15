@@ -1,0 +1,83 @@
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#1E293B;
+}
+
+/* LOGO */
+.navbar h1{
+    color:white;
+    font-size:30px;
+}
+
+/* MENU */
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+/* ITEMS */
+.navbar li{
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.navbar li:hover{
+    color:#60A5FA;
+}
+
+/* ========================= */
+/* 🔥 RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .navbar{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:15px 20px;
+    }
+
+    .navbar h1{
+        font-size:24px;
+        margin-bottom:10px;
+    }
+
+    .navbar ul{
+        flex-direction:column;
+        width:100%;
+        gap:15px;
+        padding:0;
+    }
+
+    .navbar li{
+        padding:10px;
+        width:100%;
+        border-radius:6px;
+    }
+
+    .navbar li:hover{
+        background:#334155;
+        color:#60A5FA;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+    .navbar h1{
+        font-size:20px;
+    }
+
+    .navbar{
+        padding:15px;
+    }
+
+    .navbar li{
+        font-size:14px;
+    }
+}
